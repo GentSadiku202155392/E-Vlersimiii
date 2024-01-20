@@ -50,7 +50,7 @@ public class MesimdhenesiiController : ControllerBase
         return Ok(await _context.Mesimdhenesiis.ToListAsync());
     }
 
-    // Update Bus
+    // Update Mesimdhenesii
     [HttpPut("UpdateMesimdhenesii")]
     public async Task<ActionResult<Mesimdhenesii>> UpdateMesimdhenesii(Mesimdhenesii request)
     {
@@ -58,7 +58,17 @@ public class MesimdhenesiiController : ControllerBase
         if (dbMesimdhenesii == null)
             return NotFound("Mesimdhenesi not found");
 
-        // Your update logic here
+        if (!request.Lenda.Equals(""))
+            dbMesimdhenesii.Lenda = request.Lenda;
+        if (!request.Lenda.Equals(""))
+            dbMesimdhenesii.Lenda = request.Lenda;
+        if (!request.MbiemriM.Equals(""))
+            dbMesimdhenesii.MbiemriM = request.MbiemriM;
+        if (!request.EmriM.Equals(""))
+            dbMesimdhenesii.EmriM = request.EmriM;
+        if (!request.NrTel.Equals(""))
+            dbMesimdhenesii.NrTel = request.NrTel;
+      
 
         await _context.SaveChangesAsync();
 

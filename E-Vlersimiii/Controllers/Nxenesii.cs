@@ -52,24 +52,46 @@ public class NxenesiiController : ControllerBase
 
     // Update Nxenes
     [HttpPut("UpdateNxenesi")]
-    public async Task<ActionResult<Nxenesii>> UpdateDitari(Nxenesii request)
+    public async Task<ActionResult<Nxenesii>> UpdateNxenesii(Nxenesii request)
     {
         var dbNxenesii = await _context.Nxenesii.FindAsync(request.IdNxenesi);
         if (dbNxenesii == null)
             return NotFound("Nxenesi not found");
 
-        // Your update logic here
+        if (!request.Klasa.Equals(""))
+            dbNxenesii.Klasa = request.Klasa;
+        if (!request.EmriN.Equals(""))
+            dbNxenesii.EmriN = request.EmriN;
+        if (!request.MbiemriN.Equals(""))
+            dbNxenesii.MbiemriN = request.MbiemriN;
+        if (!request.Lenda.Equals(""))
+            dbNxenesii.Lenda = request.Lenda;
+     
+
 
         await _context.SaveChangesAsync();
 
         return Ok(await _context.Nxenesii.ToListAsync());
     }
 
+
+   
+        
+
+
+
+    
+
+
+
+
+
+
     // Delete Nxenes
-    [HttpDelete("FshijeNxenesin/{IdNxenesi}")]
-    public async Task<ActionResult<List<Nxenesii>>> DeleteNxenesii(int IdNxenesi)
+    [HttpDelete("FshijeNxenesin/{idNxenesi}")]
+    public async Task<ActionResult<List<Nxenesii>>> DeleteNxenesii(int idNxenesi)
     {
-        var dbNxenesii = await _context.Nxenesii.FindAsync(IdNxenesi);
+        var dbNxenesii = await _context.Nxenesii.FindAsync(idNxenesi);
         if (dbNxenesii == null)
             return NotFound("Nxenesi not found");
 
