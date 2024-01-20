@@ -25,7 +25,7 @@ public class DitariController : ControllerBase
     }
 
     [HttpGet("{IdKlasa}")]
-    // GET: api/Shippingschedules/ID
+    
   
     public async Task<ActionResult<Ditari>> GetDitari(string IdKlasa)
     {
@@ -58,7 +58,18 @@ public class DitariController : ControllerBase
         if (dbDitari == null)
             return NotFound("Ditari not found");
 
-        // Your update logic here
+        if (!request.ID_Ditari.Equals(""))
+            dbDitari.ID_Ditari = request.ID_Ditari;
+        if (!request.Lenda.Equals(""))
+            dbDitari.Lenda = request.Lenda;
+        if (!request.MesimdhenesiId.Equals(""))
+            dbDitari.MesimdhenesiId = request.MesimdhenesiId;
+        if (!request.NxenesiId.Equals(""))
+            dbDitari.NxenesiId = request.NxenesiId;
+        if (!request.Prezenca.Equals(""))
+            dbDitari.Prezenca = request.Prezenca;
+        if (!request.Orari.Equals(""))
+            dbDitari.Orari = request.Orari;
 
         await _context.SaveChangesAsync();
 
@@ -66,7 +77,7 @@ public class DitariController : ControllerBase
     }
 
     // Delete a ditar
-    [HttpDelete("FshijeDitarin/{IdKlasa}")]
+    [HttpDelete("FshijeDitarin")]
     public async Task<ActionResult<List<Ditari>>> DeleteDitari(string IdKlasa)
     {
         var dbDitari = await _context.Ditari.FindAsync(IdKlasa);
