@@ -45,6 +45,11 @@ export default function UpdateNxenesii() {
 
     return (
         <form onSubmit={handleEdit} >
+        <h4 className="text-h4">
+        Perditeso Nxenesin
+        </h4>
+       <br />
+       <br />
                   <TextField
             required
             idKlasa="filled-required"
@@ -52,6 +57,11 @@ export default function UpdateNxenesii() {
                 variant="standard"
                 value={idNxenesi}
                 onChange={(e) => setIdNxenesi(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
                       <TextField
             required
@@ -60,7 +70,16 @@ export default function UpdateNxenesii() {
                 variant="standard"
                 value={klasa}
                 onChange={(e) => setKlasa(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
+  
+
+
+            
                        <TextField
             required
             lenda="filled-required"
@@ -68,6 +87,11 @@ export default function UpdateNxenesii() {
                 variant="standard"
                 value={emriN}
                 onChange={(e) => setEmriN(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                  
+                }}
             />
                        <TextField
             required
@@ -76,6 +100,11 @@ export default function UpdateNxenesii() {
                 variant="standard"
                 value={mbiemriN}
                 onChange={(e) => setMbiemriN(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+              
+                }}
             />
                        <TextField
             required
@@ -84,13 +113,18 @@ export default function UpdateNxenesii() {
                 variant="standard"
                 value={lenda}
                 onChange={(e) => setLenda(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                  
+                }}
             />
                     
                             <br /><br /><br />
                            
-                           <button type="submit" className="btn btn-outline-secondary">
-                               Ruaj ndryshimet
-                            </button>
+                            <button type="submit" className="button">
+               Ruaj ndryshimet
+            </button>
         </form>
     );
-}
+} 

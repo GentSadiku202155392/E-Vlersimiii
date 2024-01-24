@@ -40,7 +40,7 @@ export default function UpdateMesimdhenesii() {
                         
                     });
             }
-        });
+        }); 
     };
     
 
@@ -53,7 +53,15 @@ export default function UpdateMesimdhenesii() {
                 variant="standard"
                 value={idMesimdhensi}
                 onChange={(e) => setIdMesimdhensi(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
+
+
+
                       <TextField
             required
             iD_Ditari="filled-required"
@@ -61,6 +69,11 @@ export default function UpdateMesimdhenesii() {
                 variant="standard"
                 value={lenda}
                 onChange={(e) => setLenda(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
                        <TextField
             required
@@ -69,6 +82,11 @@ export default function UpdateMesimdhenesii() {
                 variant="standard"
                 value={mbiemriM}
                 onChange={(e) => setMbiemriM(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                    
+                }}
             />
                        <TextField
             required
@@ -77,6 +95,11 @@ export default function UpdateMesimdhenesii() {
                 variant="standard"
                 value={emriM}
                 onChange={(e) => setEmriM(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                    
+                }}
             />
                        <TextField
             required
@@ -85,13 +108,18 @@ export default function UpdateMesimdhenesii() {
                 variant="standard"
                 value={nrTel}
                 onChange={(e) => setNrTel(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                    
+                }}
             />
                     
-                            <br /><br /><br />
+                    <br /><br /><br />
                            
-                           <button type="submit" className="btn btn-outline-secondary">
-                               Ruaj ndryshimet
-                            </button>
+                           <button type="submit" className="button">
+              Ruaj ndryshimet
+           </button>
         </form>
     );
 }
