@@ -53,6 +53,11 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={idKlasa}
                 onChange={(e) => setIdKlasa(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
                       <TextField
             required
@@ -61,6 +66,11 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={iD_Ditari}
                 onChange={(e) => setID_Ditari(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px',
+                    marginBottom: '20px'
+                }}
             />
                        <TextField
             required
@@ -69,6 +79,10 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={lenda}
                 onChange={(e) => setLenda(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                }}
             />
                        <TextField
             required
@@ -77,6 +91,10 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={mesimdhenesiId}
                 onChange={(e) => setMesimdhenesiId(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                }}
             />
                        <TextField
             required
@@ -85,6 +103,10 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={nxenesiId}
                 onChange={(e) => setNxenesiId(e.target.value)}
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                }}
             />
                        <TextField
             required
@@ -93,6 +115,10 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={prezenca}
                 onChange={(e) => setPrezenca(e.target.value)} 
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                }}
             />
                         <TextField
             required
@@ -101,12 +127,16 @@ export default function UpdateDitari() {
                 variant="standard"
                 value={orari}
                 onChange={(e) => setOrari(e.target.value)} 
+                sx={{ 
+                    marginLeft:'20px',
+                    marginRight:'20px'
+                }}
             />
-                            <br /><br /><br />
+                             <br /><br /><br />
                            
-                           <button type="submit" className="btn btn-outline-secondary">
-                               Ruaj ndryshimet
-                            </button>
+                           <button type="submit" className="button">
+              Ruaj ndryshimet
+           </button>
         </form>
     );
 }
